@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', startGame)
 
 var board = {
   cells: [
-    { row: 0, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 0, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 0, col: 2, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 0, col: 3, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 0, col: 4, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 0, col: 5, isMine: false, isMarked: false, surroundingMines: 2, hidden: true },
-    { row: 1, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 1, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 1, col: 2, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 1, col: 3, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 1, col: 4, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 1, col: 5, isMine: false, isMarked: false, surroundingMines: 2, hidden: true },
-    { row: 2, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 2, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 2, col: 2, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 2, col: 3, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 2, col: 4, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 2, col: 5, isMine: false, isMarked: false, surroundingMines: 2, hidden: true },
-    { row: 3, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 3, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 3, col: 2, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 3, col: 3, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 3, col: 4, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 3, col: 5, isMine: false, isMarked: false, surroundingMines: 2, hidden: true },
-    { row: 4, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 4, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 4, col: 2, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 4, col: 3, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 4, col: 4, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 4, col: 5, isMine: false, isMarked: false, surroundingMines: 2, hidden: true },
-    { row: 5, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 5, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 5, col: 2, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 5, col: 3, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 5, col: 4, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 5, col: 5, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }
+    { row: 0, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 0, col: 1, isMine: true, isMarked: false, surroundingMines: 2, hidden: true }, { row: 0, col: 2, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 0, col: 3, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 0, col: 4, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 0, col: 5, isMine: true, isMarked: false, surroundingMines: 2, hidden: true },
+    { row: 1, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 1, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 1, col: 2, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 1, col: 3, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 1, col: 4, isMine: true, isMarked: false, surroundingMines: 1, hidden: true }, { row: 1, col: 5, isMine: true, isMarked: false, surroundingMines: 2, hidden: true },
+    { row: 2, col: 0, isMine: true, isMarked: false, surroundingMines: 1, hidden: true }, { row: 2, col: 1, isMine: true, isMarked: false, surroundingMines: 2, hidden: true }, { row: 2, col: 2, isMine: true, isMarked: false, surroundingMines: 1, hidden: true }, { row: 2, col: 3, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 2, col: 4, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 2, col: 5, isMine: false, isMarked: false, surroundingMines: 2, hidden: true },
+    { row: 3, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 3, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 3, col: 2, isMine: true, isMarked: false, surroundingMines: 1, hidden: true }, { row: 3, col: 3, isMine: true, isMarked: false, surroundingMines: 2, hidden: true }, { row: 3, col: 4, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 3, col: 5, isMine: false, isMarked: false, surroundingMines: 2, hidden: true },
+    { row: 4, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 4, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 4, col: 2, isMine: true, isMarked: false, surroundingMines: 1, hidden: true }, { row: 4, col: 3, isMine: true, isMarked: false, surroundingMines: 2, hidden: true }, { row: 4, col: 4, isMine: true, isMarked: false, surroundingMines: 1, hidden: true }, { row: 4, col: 5, isMine: false, isMarked: false, surroundingMines: 2, hidden: true },
+    { row: 5, col: 0, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 5, col: 1, isMine: false, isMarked: false, surroundingMines: 2, hidden: true }, { row: 5, col: 2, isMine: false, isMarked: false, surroundingMines: 1, hidden: true }, { row: 5, col: 3, isMine: true, isMarked: false, surroundingMines: 2, hidden: true }, { row: 5, col: 4, isMine: true, isMarked: false, surroundingMines: 1, hidden: true }, { row: 5, col: 5, isMine: true, isMarked: false, surroundingMines: 2, hidden: true }
   ]
 };
 
@@ -39,9 +39,17 @@ function checkForWin() {
 
   for(var i = 0; i < board.cells.length; i++)
   {
-    if((isMine === true) && (isMarked === true))
+    if((isMine === true) && (isMarked === false))
     {
-      
+      lib.displayMessage("You haven't won yet!");
+    }
+    else if ((hidden === true) && (isMarked === true))
+    {
+      lib.displayMessage("You haven't won yet!");
+    }
+    else if ((isMine === true) && (isMarked === true))
+    {
+      lib.displayMessage('You win!');
     }
   }
 }
